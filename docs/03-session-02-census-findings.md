@@ -52,18 +52,24 @@ from the contract.
 
 | Result | Count | Share |
 |---|---|---|
-| No URI set (empty or reverts) | 48 | 19.2% |
-| `data:application/json,` inline | 192 | 76.8% |
+| No URI set | 1 | 0.4% |
+| `data:application/json,` inline | 238 | 95.2% |
 | `ipfs://` | 7 | 2.8% |
-| `https://` | 3 | 1.2% |
+| `https://` | 4 | 1.6% |
 
-Of the 192 inline metadata documents, every one parsed cleanly, and:
+> **Correction.** An earlier pass of this section reported 48 agents (19.2%) with no
+> URI set. That was a measurement error, not a finding: the ad-hoc script used for the
+> first run swallowed RPC rate-limit failures as empty results. Re-run through
+> `arc-census`, which retries with backoff and distinguishes a revert from a transport
+> failure, the real figure is 1 of 250. The reachability result is unchanged.
 
-| Signal | Count of 192 |
+Of the 238 inline metadata documents, every one parsed cleanly, and:
+
+| Signal | Count of 238 |
 |---|---|
 | Has a `services` array (ERC-8004 spec) | **0** |
 | Has a `registrations` array (ERC-8004 spec) | **0** |
-| Has a `type` field | 2 |
+| Has a `type` field | 6 |
 | Mentions x402 | **0** |
 | Mentions MCP | **0** |
 | Declares any http endpoint other than an image | **0** |
@@ -73,26 +79,28 @@ The only URL present in any of them is the Arcscan logo, used as the `image` fie
 Name patterns after stripping the trailing hex suffix:
 
 ```
-  82  Agent-XXXXXX
-  48  Bridge-XXXXXX
-  45  Trader-XXXXXX
-   6  Agent-Mega-NNN
+ 109  Agent-XXXXXX
+  56  Trader-XXXXXX
+  50  Bridge-XXXXXX
+   7  Agent-Mega-NNN
+   5  hermes
    3  VAgent
-   2  hermes
 ```
 
-Three templates account for 175 of 192, about 91%. This is scripted registration, not
+Three templates account for 215 of 238, about 90%. This is scripted registration, not
 developers registering services.
 
 ### The ten non-inline URIs, individually checked
 
+Only **4 of 250** declare anything resembling a service endpoint, and all four fail.
+
 - **3** point at Circle's quickstart IPFS CID
   `bafkreibdi6623n3xpf7ymk62ckb4bo75o3qemwkpfvp5i25j66itxvsoei`. Exactly the
   copy-paste behavior predicted in §5 point 2. All three timed out on the gateway.
-- **5** point at **fabricated CIDs** such as
+- **4** point at **fabricated CIDs** such as
   `ipfs://bafkreigf22dd3fc341a724715108d76367496e0`. These are not valid CIDv1 strings,
   they are hex padded to look like one. All returned HTTP 500.
-- **2** point at `https://arc-agent.example.com/...`, the RFC 2606 reserved example
+- **3** point at `https://arc-agent.example.com/...`, the RFC 2606 reserved example
   domain. Connection refused.
 - **1** points at a catbox.moe upload. HTTP 502.
 

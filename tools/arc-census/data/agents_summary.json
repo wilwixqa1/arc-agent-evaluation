@@ -1,0 +1,39 @@
+{
+  "sampled": 250,
+  "schemes": {
+    "data": 238,
+    "ipfs": 7,
+    "none": 1,
+    "http": 4
+  },
+  "no_uri": 1,
+  "no_uri_pct": 0.4,
+  "distinct_uris": 247,
+  "quickstart_cid": 3,
+  "malformed_cid": 4,
+  "placeholder_host": 3,
+  "parsed_inline_json": 238,
+  "spec_has_services": 0,
+  "spec_has_registrations": 0,
+  "spec_has_type": 6,
+  "mentions_x402": 0,
+  "mentions_mcp": 0,
+  "declares_service_endpoint": 4,
+  "reachable": 0,
+  "reachable_pct": 0.0,
+  "reachable_upper_bound_95_pct": 1.2,
+  "name_patterns": {
+    "Agent": 109,
+    "Trader": 56,
+    "Bridge": 50,
+    "Agent-Mega": 7,
+    "hermes": 5,
+    "VAgent": 3,
+    "Agent-Mega-101": 1,
+    "Agent-Mega-847": 1,
+    "Agent-Mega-133": 1,
+    "Agent-Mega-57": 1
+  },
+  "max_agent_id": 888262,
+  "seed": 7
+}

@@ -25,14 +25,14 @@ In a uniform random sample of 250 of them, **zero had a reachable service endpoi
 
 | | |
 |---|---|
-| No `tokenURI` set at all | 19.2% |
-| Inline `data:` template metadata | 76.8% |
+| Inline `data:` template metadata | 95.2% |
+| Declares anything resembling a service endpoint | 4 of 250 |
 | Declares an ERC-8004 `services` array | **0** |
 | Mentions x402 | **0** |
 | Mentions MCP | **0** |
 | **Reachable service endpoint** | **0 of 250** |
 
-Three name templates (`Agent-`, `Bridge-`, `Trader-`) account for 91% of sampled
+Three name templates (`Agent-`, `Trader-`, `Bridge-`) account for 90% of sampled
 metadata. The handful of agents pointing at external URIs use Circle's quickstart
 IPFS CID, fabricated CIDs that are hex padded to look valid, or the RFC 2606 reserved
 domain `example.com`.

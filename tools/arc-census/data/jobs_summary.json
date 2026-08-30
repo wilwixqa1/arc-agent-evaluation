@@ -1,0 +1,69 @@
+{
+  "sampled": 120,
+  "status": {
+    "Completed": 60,
+    "Open": 54,
+    "Funded": 3,
+    "Rejected": 2,
+    "Submitted": 1
+  },
+  "evaluator_is_client": 81,
+  "evaluator_is_client_pct": 67.5,
+  "evaluator_is_provider": 13,
+  "hook_set": 0,
+  "hook_set_pct": 0.0,
+  "zero_budget": 60,
+  "distinct_clients": 87,
+  "distinct_providers": 65,
+  "distinct_evaluators": 83,
+  "top_descriptions": [
+    [
+      "Arc automation job",
+      19
+    ],
+    [
+      "ERC-8183 job",
+      13
+    ],
+    [
+      "ERC-8183 demo job on Arc Testnet",
+      6
+    ],
+    [
+      "Analyze competitor DEX features and write a detailed comparison",
+      5
+    ],
+    [
+      "Arc autonomous agent job | client_wallet=4 | provider_wallet=5 | evalu",
+      4
+    ],
+    [
+      "Arc autonomous agent job | client_wallet=5 | provider_wallet=1 | evalu",
+      3
+    ],
+    [
+      "ERC-8183 demo job from viem on Arc Testnet",
+      3
+    ],
+    [
+      "crosschain USDC arbitrage scan between Arc and Ethereum Sepolia",
+      2
+    ],
+    [
+      "Optimize LP positions across Arc DEX pools",
+      2
+    ],
+    [
+      "Arc autonomous agent job | client_wallet=3 | provider_wallet=4 | evalu",
+      2
+    ]
+  ],
+  "job_counter": 182398,
+  "contract_params": {
+    "job_counter": 182398,
+    "evaluator_fee_bp": 0,
+    "platform_fee_bp": 0,
+    "platform_treasury": "0xcbe5b97a069be3e4b5398663790731fb76ab620d",
+    "payment_token": "0x3600000000000000000000000000000000000000"
+  }
+}
