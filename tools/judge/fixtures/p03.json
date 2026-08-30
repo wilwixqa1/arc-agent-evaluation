@@ -1,0 +1,58 @@
+[
+  {
+    "fixtureId": "p03-f1",
+    "purposeFile": "p03-proxy-upgrade-analysis.json",
+    "label": "clear-served",
+    "expectedVerdict": "served",
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Identifies the proxy, names ADMIN_ROLE and real functions, cites checkable evidence, flags its own uncertainty.",
+    "response": "The address 0x0747EEf0706327138c69792bF28Cd525089e4583 is an ERC-1967 proxy, not a fixed implementation. Reading the implementation slot 0x360894a1...382bbc returns 0xa316fd02827242d537f84730f8a37d0ba5fd351a.\n\nUpgrades are gated by AccessControl. The implementation exposes upgradeToAndCall and proxiableUUID (UUPS), with ADMIN_ROLE and DEFAULT_ADMIN_ROLE defined via grantRole and hasRole.\n\nAn admin can change at least three things that alter behaviour for existing users: setEvaluatorFee and setPlatformFee change the cut taken from job budgets, and setHookWhitelist controls which hook contracts may be attached to jobs. Both fee parameters currently read 0.\n\nI have not reviewed who currently holds ADMIN_ROLE, so I cannot say whether it is an EOA, a multisig, or a timelock. That would need the RoleGranted event history."
+  },
+  {
+    "fixtureId": "p03-f2",
+    "purposeFile": "p03-proxy-upgrade-analysis.json",
+    "label": "clear-not-served",
+    "expectedVerdict": "not_served",
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Generic proxy explainer with no claim about this address. d1 fires.",
+    "response": "ERC-1967 defines standard storage slots for proxy contracts so that tooling can locate the implementation without collisions. UUPS proxies place the upgrade logic in the implementation rather than the proxy, which saves gas but risks bricking the contract if an implementation omits the upgrade function. Access to upgrades is typically restricted to an owner or admin role."
+  },
+  {
+    "fixtureId": "p03-f3",
+    "purposeFile": "p03-proxy-upgrade-analysis.json",
+    "label": "clear-not-served",
+    "expectedVerdict": "not_served",
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Asserts immutability. d2 fires.",
+    "response": "0x0747EEf0706327138c69792bF28Cd525089e4583 is a standard non-upgradeable contract deployed on Arc testnet. Its bytecode is fixed at deployment and no party can alter its behaviour after the fact, so you can rely on its current logic remaining stable."
+  },
+  {
+    "fixtureId": "p03-f4",
+    "purposeFile": "p03-proxy-upgrade-analysis.json",
+    "label": "clear-not-served",
+    "expectedVerdict": "not_served",
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Invents function and role names not present in this ABI. d3 fires.",
+    "response": "The contract 0x0747EEf0706327138c69792bF28Cd525089e4583 is upgradeable. Upgrades are controlled by the GOVERNOR_ROLE and executed through scheduleUpgrade followed by executeUpgrade after a 48-hour timelock. Parameters are changed via setProtocolConfig, which is restricted to the same role."
+  },
+  {
+    "fixtureId": "p03-f5",
+    "purposeFile": "p03-proxy-upgrade-analysis.json",
+    "label": "ambiguous",
+    "expectedVerdict": null,
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Correctly identifies the proxy and cites the slot, but says 'an admin role' without naming it. s2 requires naming the specific mechanism rather than describing generically, and this sits exactly on that line.",
+    "response": "0x0747EEf0706327138c69792bF28Cd525089e4583 is an upgradeable proxy. The EIP-1967 implementation slot is populated, pointing at a separate logic contract. Upgrades are permissioned to an admin role held by the deployer, and that role can also adjust fee parameters affecting existing jobs.",
+    "notes": "tests where the judge draws the line on naming the specific mechanism"
+  },
+  {
+    "fixtureId": "p03-f6",
+    "purposeFile": "p03-proxy-upgrade-analysis.json",
+    "label": "ambiguous",
+    "expectedVerdict": null,
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Everything correct about the proxy, but folds in the ERC-8004 registries without separating them. d4 asks about answering on a different contract without flagging substitution; it answered about both.",
+    "response": "0x0747EEf0706327138c69792bF28Cd525089e4583 is an ERC-1967 proxy and can be upgraded by holders of ADMIN_ROLE via upgradeToAndCall. The same is true of the ERC-8004 registries at 0x8004A818..., 0x8004B663... and 0x8004Cb1B..., which are all proxies under the same pattern, so the whole registry set on Arc shares this upgrade risk. Fee parameters and the hook whitelist are admin-controlled.",
+    "notes": "tests whether covering extra contracts counts as substituting a different one"
+  }
+]

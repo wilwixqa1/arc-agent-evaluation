@@ -1,0 +1,94 @@
+[
+  {
+    "fixtureId": "p01-f1",
+    "purposeFile": "p01-usdc-supply-lookup.json",
+    "label": "clear-served",
+    "expectedVerdict": "served",
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Right contract, block above the bound, units stated explicitly.",
+    "response": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    }
+  },
+  {
+    "fixtureId": "p01-f2",
+    "purposeFile": "p01-usdc-supply-lookup.json",
+    "label": "clear-not-served",
+    "expectedVerdict": "not_served",
+    "expectedDisqualifiers": [
+      "d1"
+    ],
+    "labellerRationale": "Returns Ethereum mainnet supply. d1 fires regardless of how well formed it is.",
+    "response": {
+      "contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "chain": "ethereum",
+      "totalSupply": "61204880000000000",
+      "decimals": 6,
+      "blockNumber": 21550331
+    }
+  },
+  {
+    "fixtureId": "p01-f3",
+    "purposeFile": "p01-usdc-supply-lookup.json",
+    "label": "clear-not-served",
+    "expectedVerdict": "not_served",
+    "expectedDisqualifiers": [
+      "d2"
+    ],
+    "labellerRationale": "A number with no as-of marker anywhere. d2 fires.",
+    "response": {
+      "totalSupply": "48221930114",
+      "note": "USDC total supply on Arc testnet"
+    }
+  },
+  {
+    "fixtureId": "p01-f4",
+    "purposeFile": "p01-usdc-supply-lookup.json",
+    "label": "clear-not-served",
+    "expectedVerdict": "not_served",
+    "expectedDisqualifiers": [
+      "d3"
+    ],
+    "labellerRationale": "Explains how to query rather than answering. d3 fires.",
+    "response": {
+      "answer": "To read USDC total supply on Arc, call totalSupply() on the USDC contract via any Arc RPC endpoint. In viem you would use readContract with the erc20Abi. The result is denominated in base units."
+    }
+  },
+  {
+    "fixtureId": "p01-f5",
+    "purposeFile": "p01-usdc-supply-lookup.json",
+    "label": "ambiguous",
+    "expectedVerdict": null,
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Right contract and a block number, but units left implicit. s3 turns on whether '6 decimals is standard for USDC' counts as unambiguously derivable. Arguable either way, which is the point.",
+    "response": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "totalSupply": "48221930114",
+      "blockNumber": 59445102
+    },
+    "notes": "tests whether the judge imports outside knowledge to resolve s3"
+  },
+  {
+    "fixtureId": "p01-f6",
+    "purposeFile": "p01-usdc-supply-lookup.json",
+    "label": "ambiguous",
+    "expectedVerdict": null,
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Correct shape but flagged as cached. s4 depends on whether disclosed caching counts as 'silently substituted'. The disclosure arguably means it is not silent.",
+    "response": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "totalSupply": "48219000000",
+      "decimals": 6,
+      "blockNumber": 59441200,
+      "source": "cached",
+      "cacheNote": "served from cache"
+    },
+    "notes": "tests whether 'silently' in s4 is read as load-bearing"
+  }
+]

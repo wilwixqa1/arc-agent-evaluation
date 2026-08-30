@@ -1,0 +1,59 @@
+[
+  {
+    "fixtureId": "p04-f1",
+    "purposeFile": "p04-WEAK-negative-fixture.json",
+    "label": "ambiguous",
+    "expectedVerdict": null,
+    "expectedDisqualifiers": [],
+    "labellerRationale": "A genuinely substantive answer. Against vague criteria it should pass, and the point is that it passes for reasons the purpose did not earn.",
+    "response": "Agent payments generally combine three layers: an authorization artifact such as AP2's Intent Mandate, a payment rail such as x402 over EIP-3009, and a settlement asset, usually USDC. The distinguishing problem is that agents transact without a human in the loop at the moment of purchase, which shifts liability onto whatever the user signed in advance.",
+    "notes": "baseline: substantive response against a vague purpose"
+  },
+  {
+    "fixtureId": "p04-f2",
+    "purposeFile": "p04-WEAK-negative-fixture.json",
+    "label": "ambiguous",
+    "expectedVerdict": null,
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Content-free filler. If this scores anything but not_served, that is evidence the weak purpose is ungradeable rather than evidence about the response.",
+    "response": "Agent payments are an important and rapidly evolving area. There are many considerations to keep in mind, and the landscape continues to develop as new approaches emerge. Understanding the fundamentals is valuable for anyone looking to learn more about this space.",
+    "notes": "KEY FIXTURE. Vacuous prose against vacuous criteria. Low consistency here is the finding."
+  },
+  {
+    "fixtureId": "p04-f3",
+    "purposeFile": "p04-WEAK-negative-fixture.json",
+    "label": "ambiguous",
+    "expectedVerdict": null,
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Confidently wrong but well formed. Tests whether vague criteria catch factual error at all.",
+    "response": "Agent payments on x402 work by having the agent post a bond in ETH before each request, which the server slashes if the agent disputes the charge. Settlement happens through a central clearing house operated by the x402 Foundation, which nets payments daily and requires KYC registration for all participating agents.",
+    "notes": "tests whether 'helpful and relevant' criteria catch factual falsehood"
+  },
+  {
+    "fixtureId": "p04-f4",
+    "purposeFile": "p04-WEAK-negative-fixture.json",
+    "label": "ambiguous",
+    "expectedVerdict": null,
+    "expectedDisqualifiers": [],
+    "labellerRationale": "On topic but answers a different question than the one asked.",
+    "response": "The best way to reduce payment processing costs is to negotiate interchange rates with your acquirer and route transactions through the lowest-cost network available for each card type. For businesses processing over one million dollars annually, interchange-plus pricing typically saves two to four percent versus flat-rate providers."
+  },
+  {
+    "fixtureId": "p04-f5",
+    "purposeFile": "p04-WEAK-negative-fixture.json",
+    "label": "clear-not-served",
+    "expectedVerdict": "not_served",
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Empty of content and an explicit refusal. Even vague criteria should fail this; if they do not, the purpose is worthless.",
+    "response": "I'm not able to help with that."
+  },
+  {
+    "fixtureId": "p04-f6",
+    "purposeFile": "p04-WEAK-negative-fixture.json",
+    "label": "ambiguous",
+    "expectedVerdict": null,
+    "expectedDisqualifiers": [],
+    "labellerRationale": "One accurate sentence. Tests where the judge places the bar for 'reasonably high quality' when nothing anchors it.",
+    "response": "Agent payments typically settle in USDC."
+  }
+]

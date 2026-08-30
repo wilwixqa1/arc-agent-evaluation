@@ -1,0 +1,106 @@
+[
+  {
+    "fixtureId": "p02-f1",
+    "purposeFile": "p02-x402-settlement-summary.json",
+    "label": "clear-served",
+    "expectedVerdict": "served",
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Count, explicit boundaries, x402 separated from general transfers, baseline named, one field marked unavailable rather than invented.",
+    "response": {
+      "windowStart": "2026-08-29T12:00:00Z",
+      "windowEnd": "2026-08-30T12:00:00Z",
+      "protocol": "x402",
+      "chain": "base",
+      "transactionCount": 41277,
+      "settledVolumeUsdc": 18944.22,
+      "uniquePayers": 3120,
+      "comparisonBaseline": "preceding 24h window 2026-08-28T12:00Z to 2026-08-29T12:00Z",
+      "changeVsBaseline": "+7.4% by transaction count",
+      "methodology": "filtered to transfers carrying an x402 facilitator settlement marker, excludes general USDC transfers",
+      "medianPaymentUsdc": null,
+      "medianPaymentNote": "unavailable, facilitator does not expose per-payment amounts"
+    }
+  },
+  {
+    "fixtureId": "p02-f2",
+    "purposeFile": "p02-x402-settlement-summary.json",
+    "label": "clear-not-served",
+    "expectedVerdict": "not_served",
+    "expectedDisqualifiers": [
+      "d1"
+    ],
+    "labellerRationale": "Protocol explainer with no figure for the window. d1 fires.",
+    "response": {
+      "answer": "x402 is an HTTP-native payment protocol that uses the 402 Payment Required status code. A client requests a resource, the server responds with payment requirements, and the client signs an EIP-3009 authorization which a facilitator settles on chain."
+    }
+  },
+  {
+    "fixtureId": "p02-f3",
+    "purposeFile": "p02-x402-settlement-summary.json",
+    "label": "clear-not-served",
+    "expectedVerdict": "not_served",
+    "expectedDisqualifiers": [
+      "d3"
+    ],
+    "labellerRationale": "Presents total Base USDC transfer volume as x402 settlement volume. d3 fires.",
+    "response": {
+      "windowStart": "2026-08-29T12:00:00Z",
+      "windowEnd": "2026-08-30T12:00:00Z",
+      "chain": "base",
+      "transactionCount": 2841003,
+      "settledVolumeUsdc": 1902445120.0,
+      "description": "x402 settlement activity on Base"
+    }
+  },
+  {
+    "fixtureId": "p02-f4",
+    "purposeFile": "p02-x402-settlement-summary.json",
+    "label": "clear-not-served",
+    "expectedVerdict": "not_served",
+    "expectedDisqualifiers": [
+      "d2"
+    ],
+    "labellerRationale": "Silently reports a 7-day window against a 24-hour request. d2 fires.",
+    "response": {
+      "windowStart": "2026-08-23T12:00:00Z",
+      "windowEnd": "2026-08-30T12:00:00Z",
+      "protocol": "x402",
+      "chain": "base",
+      "transactionCount": 288104,
+      "summary": "x402 activity over the last day"
+    }
+  },
+  {
+    "fixtureId": "p02-f5",
+    "purposeFile": "p02-x402-settlement-summary.json",
+    "label": "ambiguous",
+    "expectedVerdict": null,
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Real 24h figure with boundaries, but 'up sharply' names no baseline. s4 requires a baseline where a trend is given; a bare directional claim sits on that line.",
+    "response": {
+      "windowStart": "2026-08-29T12:00:00Z",
+      "windowEnd": "2026-08-30T12:00:00Z",
+      "protocol": "x402",
+      "chain": "base",
+      "transactionCount": 41277,
+      "trend": "up sharply"
+    },
+    "notes": "tests whether a directional claim without a number counts as giving a trend"
+  },
+  {
+    "fixtureId": "p02-f6",
+    "purposeFile": "p02-x402-settlement-summary.json",
+    "label": "ambiguous",
+    "expectedVerdict": null,
+    "expectedDisqualifiers": [],
+    "labellerRationale": "Count and window given, but never states how x402 was separated from general activity. The magnitude is plausible for x402 and implausible for all Base transfers, so s3 hinges on whether the judge infers method from magnitude.",
+    "response": {
+      "windowStart": "2026-08-29T12:00:00Z",
+      "windowEnd": "2026-08-30T12:00:00Z",
+      "chain": "base",
+      "transactionCount": 41277,
+      "settledVolumeUsdc": 18944.22
+    },
+    "notes": "tests whether the judge infers method from a plausible magnitude"
+  }
+]

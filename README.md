@@ -78,9 +78,13 @@ spec/
   purpose.schema.json    the purpose document schema (draft 2020-12)
   examples/              four sealed purposes, including a negative fixture
 
+spec/
+  rubric/v0.1.0.md       the judging protocol
+
 tools/
   arc-census/            chain measurement tooling (no wallet required)
   purpose/               canonicalize, seal, validate and score purposes
+  judge/                 rubric-driven evaluation, fixtures, Phase 0 harness
 ```
 
 ## Quick start
@@ -119,6 +123,24 @@ vagueness, so it measures it instead.
 cd tools/purpose && pip install -r requirements.txt
 python seal_examples.py
 python tests/test_purpose.py
+```
+
+## The judge
+
+The judge never gives an overall verdict. It answers one narrow yes-or-no question per
+success criterion and per disqualifier, and the verdict is computed from those answers
+by a deterministic rule. "Did the response state a block number above 59000000" is
+answered the same way on repeated runs; "was this response good" is not.
+
+Phase 0 tests that assumption before anything is built on it: 24 hand-labelled
+fixtures, 3 repeats, no blockchain and no services involved. Bars are 90%
+self-consistency and 80% agreement with the human label, on clear fixtures only.
+
+```bash
+cd tools/judge
+python tests/test_judge.py        # 44 tests, no API key needed
+python run_phase0.py --dry-run    # assemble all 24 prompts, call nothing
+ANTHROPIC_API_KEY=... python run_phase0.py --repeats 3
 ```
 
 ## Reference
