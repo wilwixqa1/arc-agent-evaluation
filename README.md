@@ -85,6 +85,7 @@ tools/
   arc-census/            chain measurement tooling (no wallet required)
   purpose/               canonicalize, seal, validate and score purposes
   judge/                 rubric-driven evaluation, fixtures, Phase 0 harness
+  calibration/           six x402 sellers with engineered quality profiles
 ```
 
 ## Quick start
@@ -141,6 +142,37 @@ cd tools/judge
 python tests/test_judge.py        # 44 tests, no API key needed
 python run_phase0.py --dry-run    # assemble all 24 prompts, call nothing
 ANTHROPIC_API_KEY=... python run_phase0.py --repeats 3
+```
+
+## Calibration services
+
+Six x402 sellers with known, deliberately engineered quality profiles, because a judge
+can be perfectly self-consistent and consistently wrong. Grading responses whose
+quality we already know is the only check on that.
+
+108 attempts across 6 profiles, 6 phrasings and 3 repeats, using **only the
+deterministic constraint checker with no judge involved**:
+
+| profile | passes | constraint violated | no response |
+|---|---|---|---|
+| honest | 18 | 0 | 0 |
+| flaky | 13 | 0 | 5 |
+| brittle | 3 | 15 | 0 |
+| deadbeat | 0 | 0 | 18 |
+| truncator | 0 | 18 | 0 |
+| confabulator | 18 | 0 | 0 |
+
+An uptime monitor sees **103 of 108 attempts return HTTP 200**, so 95.4% uptime across
+a population where one of six services is actually good. `deadbeat` takes payment,
+returns nothing, and is 100% "up". `brittle` passes on its canonical phrasing and fails
+on all five paraphrases while never erroring, which is invisible to liveness monitoring
+by construction. `confabulator` passes every hard constraint with half its answers
+fabricated, which is precisely the gap the judge exists to fill.
+
+```bash
+cd tools/calibration
+python services.py --port 8402
+python tests/test_calibration.py
 ```
 
 ## Reference

@@ -1,0 +1,88 @@
+{
+  "generatedBy": "tools/calibration/services.py",
+  "flakySuccessRate": 0.7,
+  "resources": {
+    "usdc-supply": {
+      "price_usdc": 0.01,
+      "truth": {
+        "contract": "0x3600000000000000000000000000000000000000",
+        "chainId": 5042002,
+        "totalSupply": "48221930114",
+        "decimals": 6,
+        "totalSupplyFormatted": "48221.930114 USDC",
+        "blockNumber": 59445102,
+        "source": "live eth_call"
+      }
+    },
+    "x402-summary": {
+      "price_usdc": 0.05,
+      "truth": {
+        "windowStart": "2026-08-29T12:00:00Z",
+        "windowEnd": "2026-08-30T12:00:00Z",
+        "protocol": "x402",
+        "chain": "base",
+        "transactionCount": 41277,
+        "settledVolumeUsdc": 18944.22,
+        "uniquePayers": 3120,
+        "comparisonBaseline": "preceding 24h window 2026-08-28T12:00Z to 2026-08-29T12:00Z",
+        "changeVsBaseline": "+7.4% by transaction count",
+        "methodology": "filtered to transfers carrying an x402 facilitator settlement marker, excludes general USDC transfers"
+      }
+    },
+    "contract-analysis": {
+      "price_usdc": 0.2,
+      "truth": {
+        "address": "0x0747EEf0706327138c69792bF28Cd525089e4583",
+        "isProxy": true,
+        "proxyStandard": "ERC-1967 (UUPS)",
+        "implementation": "0xa316fd02827242d537f84730f8a37d0ba5fd351a",
+        "upgradeControl": "AccessControl, ADMIN_ROLE and DEFAULT_ADMIN_ROLE, via upgradeToAndCall",
+        "adminMutableParameters": [
+          "setEvaluatorFee",
+          "setPlatformFee",
+          "setHookWhitelist"
+        ],
+        "evidence": "implementation slot 0x360894a1...382bbc is populated; ABI exposes proxiableUUID and grantRole",
+        "uncertainty": "current ADMIN_ROLE holders not reviewed; would need RoleGranted history"
+      }
+    }
+  },
+  "profiles": {
+    "honest": {
+      "expected": "served",
+      "deterministic": true,
+      "rationale": "correct and complete on every resource",
+      "brittlePattern": null
+    },
+    "flaky": {
+      "expected": "mixed",
+      "deterministic": false,
+      "rationale": "correct ~70% of attempts, errors otherwise, independent of phrasing; expect no_response on failed rolls",
+      "brittlePattern": null
+    },
+    "brittle": {
+      "expected": "phrasing-dependent",
+      "deterministic": true,
+      "rationale": "served only when the query matches the expected pattern, not_served otherwise; always HTTP 200 so uptime monitoring cannot detect this",
+      "brittlePattern": "\\btotal\\s+usdc\\s+supply\\b.*\\barc\\b"
+    },
+    "deadbeat": {
+      "expected": "no_response",
+      "deterministic": true,
+      "rationale": "HTTP 200 with an empty body after taking payment",
+      "brittlePattern": null
+    },
+    "truncator": {
+      "expected": "partially_served or not_served",
+      "deterministic": true,
+      "rationale": "well-formed but provenance stripped; should trip the disqualifiers about missing as-of markers and the requiredFields constraint",
+      "brittlePattern": null
+    },
+    "confabulator": {
+      "expected": "mixed",
+      "deterministic": false,
+      "rationale": "shape always correct, content fabricated ~50% of attempts; a judge grading form rather than content will score this too highly, which is the test",
+      "brittlePattern": null
+    }
+  }
+}

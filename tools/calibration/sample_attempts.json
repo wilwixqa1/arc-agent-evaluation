@@ -1,0 +1,4624 @@
+[
+  {
+    "attemptId": "honest:usdc-supply:canonical:r0",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 41,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:canonical:r1",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:canonical:r2",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:para-1:r0",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:para-1:r1",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:para-1:r2",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:para-2:r0",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:para-2:r1",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:para-2:r2",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:para-3:r0",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:para-3:r1",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:para-3:r2",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:terse:r0",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:terse:r1",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:terse:r2",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:verbose:r0",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:verbose:r1",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "honest:usdc-supply:verbose:r2",
+    "profile": "honest",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/honest/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct and complete",
+      "profile": "honest"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:canonical:r0",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:canonical:r1",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": null,
+    "status": 503,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": "HTTP 503",
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "errored (flaky roll failed)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:canonical:r2",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:para-1:r0",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:para-1:r1",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:para-1:r2",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:para-2:r0",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": null,
+    "status": 503,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": "HTTP 503",
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "errored (flaky roll failed)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:para-2:r1",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:para-2:r2",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:para-3:r0",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:para-3:r1",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:para-3:r2",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:terse:r0",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:terse:r1",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:terse:r2",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": null,
+    "status": 503,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": "HTTP 503",
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "errored (flaky roll failed)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:verbose:r0",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": null,
+    "status": 503,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": "HTTP 503",
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "errored (flaky roll failed)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:verbose:r1",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": null,
+    "status": 503,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": "HTTP 503",
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "errored (flaky roll failed)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "flaky:usdc-supply:verbose:r2",
+    "profile": "flaky",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/flaky/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (flaky roll succeeded)",
+      "profile": "flaky"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:canonical:r0",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (query matched expected pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:canonical:r1",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (query matched expected pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:canonical:r2",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (query matched expected pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:para-1:r0",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:para-1:r1",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:para-1:r2",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:para-2:r0",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:para-2:r1",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:para-2:r2",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:para-3:r0",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:para-3:r1",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:para-3:r2",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:terse:r0",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:terse:r1",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:terse:r2",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:verbose:r0",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:verbose:r1",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "brittle:usdc-supply:verbose:r2",
+    "profile": "brittle",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "answer": "USDC is a fully reserved dollar stablecoin issued by Circle. Supply figures vary by chain and can be read from the token contract."
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/brittle/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "degraded to generic non-answer (query did not match pattern)",
+      "profile": "brittle"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:canonical:r0",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:canonical:r1",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:canonical:r2",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:para-1:r0",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {},
+    "status": 200,
+    "latencyMs": 2,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:para-1:r1",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:para-1:r2",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:para-2:r0",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:para-2:r1",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:para-2:r2",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:para-3:r0",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:para-3:r1",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:para-3:r2",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:terse:r0",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:terse:r1",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:terse:r2",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:verbose:r0",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:verbose:r1",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "deadbeat:usdc-supply:verbose:r2",
+    "profile": "deadbeat",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {},
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/deadbeat/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "took payment, returned nothing",
+      "profile": "deadbeat"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:canonical:r0",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:canonical:r1",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:canonical:r2",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:para-1:r0",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:para-1:r1",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:para-1:r2",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:para-2:r0",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:para-2:r1",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:para-2:r2",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:para-3:r0",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:para-3:r1",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:para-3:r2",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:terse:r0",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:terse:r1",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:terse:r2",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:verbose:r0",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:verbose:r1",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "truncator:usdc-supply:verbose:r2",
+    "profile": "truncator",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48222000000"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/truncator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "dropped blockNumber, decimals and source; rounded totalSupply",
+      "profile": "truncator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:canonical:r0",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "912774310558",
+      "decimals": 6,
+      "totalSupplyFormatted": "912774.310558 USDC",
+      "blockNumber": 61002884,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "FABRICATED content, correct shape (confabulation roll failed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:canonical:r1",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "912774310558",
+      "decimals": 6,
+      "totalSupplyFormatted": "912774.310558 USDC",
+      "blockNumber": 61002884,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "FABRICATED content, correct shape (confabulation roll failed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:canonical:r2",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "canonical",
+    "query": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "912774310558",
+      "decimals": 6,
+      "totalSupplyFormatted": "912774.310558 USDC",
+      "blockNumber": 61002884,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "FABRICATED content, correct shape (confabulation roll failed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:para-1:r0",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (confabulation roll passed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:para-1:r1",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "912774310558",
+      "decimals": 6,
+      "totalSupplyFormatted": "912774.310558 USDC",
+      "blockNumber": 61002884,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "FABRICATED content, correct shape (confabulation roll failed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:para-1:r2",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-1",
+    "query": "How much USDC is in circulation on Arc right now, and at which block?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (confabulation roll passed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:para-2:r0",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "912774310558",
+      "decimals": 6,
+      "totalSupplyFormatted": "912774.310558 USDC",
+      "blockNumber": 61002884,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "FABRICATED content, correct shape (confabulation roll failed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:para-2:r1",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (confabulation roll passed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:para-2:r2",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-2",
+    "query": "I need the outstanding amount of USDC issued on the Arc test network, with the block height of the reading",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (confabulation roll passed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:para-3:r0",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (confabulation roll passed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:para-3:r1",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (confabulation roll passed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:para-3:r2",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "para-3",
+    "query": "What does totalSupply return for the USDC token contract on Arc testnet, and as of when?",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "912774310558",
+      "decimals": 6,
+      "totalSupplyFormatted": "912774.310558 USDC",
+      "blockNumber": 61002884,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "FABRICATED content, correct shape (confabulation roll failed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:terse:r0",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (confabulation roll passed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:terse:r1",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (confabulation roll passed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:terse:r2",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "terse",
+    "query": "USDC supply on Arc, plus block",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "912774310558",
+      "decimals": 6,
+      "totalSupplyFormatted": "912774.310558 USDC",
+      "blockNumber": 61002884,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 2,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "FABRICATED content, correct shape (confabulation roll failed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:verbose:r0",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "912774310558",
+      "decimals": 6,
+      "totalSupplyFormatted": "912774.310558 USDC",
+      "blockNumber": 61002884,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 2,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "FABRICATED content, correct shape (confabulation roll failed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:verbose:r1",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "48221930114",
+      "decimals": 6,
+      "totalSupplyFormatted": "48221.930114 USDC",
+      "blockNumber": 59445102,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "correct (confabulation roll passed)",
+      "profile": "confabulator"
+    }
+  },
+  {
+    "attemptId": "confabulator:usdc-supply:verbose:r2",
+    "profile": "confabulator",
+    "resource": "usdc-supply",
+    "phrasingId": "verbose",
+    "query": "I am putting together a dashboard panel that displays circulating USDC on the Arc test network. For that I need the current total supply figure together with the block number it was read at, so the number can be shown with its provenance rather than as a bare quantity.",
+    "body": {
+      "contract": "0x3600000000000000000000000000000000000000",
+      "chainId": 5042002,
+      "totalSupply": "912774310558",
+      "decimals": 6,
+      "totalSupplyFormatted": "912774.310558 USDC",
+      "blockNumber": 61002884,
+      "source": "live eth_call"
+    },
+    "status": 200,
+    "latencyMs": 1,
+    "pricePaidUsdc": 0.01,
+    "error": null,
+    "paymentRequired": {
+      "x402Version": 1,
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "arc-testnet",
+          "maxAmountRequired": "10000",
+          "resource": "/confabulator/usdc-supply",
+          "description": "calibration service resource: usdc-supply",
+          "mimeType": "application/json",
+          "payTo": "0x000000000000000000000000000000000000dEaD",
+          "asset": "0x3600000000000000000000000000000000000000",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "name": "USDC",
+            "version": "2",
+            "decimals": 6
+          }
+        }
+      ],
+      "error": "payment required"
+    },
+    "groundTruth": {
+      "note": "FABRICATED content, correct shape (confabulation roll failed)",
+      "profile": "confabulator"
+    }
+  }
+]
