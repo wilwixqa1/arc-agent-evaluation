@@ -1,0 +1,62 @@
+{
+  "captured_at": "2026-08-29T13:47:14.970089+00:00",
+  "rpc": "https://rpc.testnet.arc.io/",
+  "chain_id": 5042002,
+  "block_number": 59447221,
+  "contracts": {
+    "identity": {
+      "proxy": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+      "implementation": "0x7274e874ca62410a93bd8bf61c69d8045e399c02",
+      "counters": {
+        "transactions_count": "886637",
+        "token_transfers_count": "2403",
+        "gas_usage_count": "451360057146",
+        "validations_count": "0"
+      }
+    },
+    "reputation": {
+      "proxy": "0x8004B663056A597Dffe9eCcC1965A193B7388713",
+      "implementation": "0x16e0fa7f7c56b9a767e34b192b51f921be31da34",
+      "counters": {
+        "transactions_count": "18972296",
+        "gas_usage_count": "2890154221191",
+        "token_transfers_count": "37292",
+        "validations_count": "0"
+      }
+    },
+    "validation": {
+      "proxy": "0x8004Cb1BF31DAf7788923b405b754f57acEB4272",
+      "implementation": "0xdb31f5d9167f8ebc8b30fbbf814c4d297c2d7f99",
+      "counters": {
+        "transactions_count": "110222",
+        "token_transfers_count": "277",
+        "gas_usage_count": "16816022797",
+        "validations_count": "0"
+      }
+    },
+    "agentic_commerce": {
+      "proxy": "0x0747EEf0706327138c69792bF28Cd525089e4583",
+      "implementation": "0xa316fd02827242d537f84730f8a37d0ba5fd351a",
+      "counters": {
+        "transactions_count": "600477",
+        "gas_usage_count": "63809016680",
+        "token_transfers_count": "164296",
+        "validations_count": "0"
+      }
+    }
+  },
+  "avg_block_time_ms": 530.0,
+  "total_blocks": "59434781",
+  "total_addresses": "50884259",
+  "identity_token": {
+    "token_holders_count": "47215",
+    "transfers_count": "887911"
+  },
+  "agentic_commerce_params": {
+    "job_counter": 182373,
+    "evaluator_fee_bp": 0,
+    "platform_fee_bp": 0,
+    "platform_treasury": "0xcbe5b97a069be3e4b5398663790731fb76ab620d",
+    "payment_token": "0x3600000000000000000000000000000000000000"
+  }
+}

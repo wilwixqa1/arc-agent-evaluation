@@ -1,0 +1,69 @@
+{
+  "sampled_agents": 140,
+  "agents_with_feedback": 35,
+  "agents_with_feedback_pct": 25.0,
+  "owner_rated_own_agent": 0,
+  "owner_rated_own_agent_pct": 0.0,
+  "single_client_agents": 6,
+  "single_client_pct": 17.14,
+  "distinct_reviewers": 959,
+  "total_reviewer_edges": 1008,
+  "top_reviewer_share_pct": 0.5,
+  "top_reviewers": [
+    [
+      "0x9d0329807c9762b74fad788c48cabbe81890f3d7",
+      5
+    ],
+    [
+      "0x0fac91845581ebdadcfae831be14feca7ac33968",
+      4
+    ],
+    [
+      "0x0bb59890f99bc2b5e93d79253d9ff4c8b94a46bd",
+      4
+    ],
+    [
+      "0x95fb8478b0c40e9b0eb673a4089576e541cacec4",
+      4
+    ],
+    [
+      "0xca5b5872fcb0cfde9222e8ffb73766a637a62cfb",
+      3
+    ],
+    [
+      "0x24773ddc67137563736085a934ebb90cfa3cee88",
+      3
+    ],
+    [
+      "0x347bd86aa53791eb7f76b82fb36951d91bfafc80",
+      3
+    ],
+    [
+      "0x7b54d0636c4439478a457a56455d891e190c1a1f",
+      3
+    ],
+    [
+      "0xca6c24e1975852ae0543ed195295154ec0240edd",
+      3
+    ],
+    [
+      "0x89ac8dfc5a94018c9ab52b18362ea4400c0f178c",
+      3
+    ]
+  ],
+  "value_decimals_distribution": {
+    "2": 1742,
+    "0": 549,
+    "1": 4
+  },
+  "raw_value_min": 65,
+  "raw_value_max": 9700,
+  "normalized_min": 9.2,
+  "normalized_max": 98.0,
+  "normalized_above_100": 0,
+  "normalized_below_zero": 0,
+  "distinct_scales_in_use": 3,
+  "scale_conflict": true,
+  "feedback_records": 2295,
+  "distinct_tags": 316
+}
