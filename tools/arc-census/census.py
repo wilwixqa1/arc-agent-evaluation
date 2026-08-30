@@ -25,6 +25,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from arcensus import identity, jobs as jobs_mod, reputation as rep_mod  # noqa: E402
+from arcensus import concentration as conc_mod  # noqa: E402
 from arcensus.chain import ArcClient, CONTRACTS  # noqa: E402
 from arcensus.explorer import Explorer  # noqa: E402
 
@@ -145,6 +146,27 @@ def cmd_jobs(args) -> dict:
     return summary
 
 
+def cmd_concentration(args) -> dict:
+    """Walk the full holder distribution and compute concentration statistics.
+
+    Resumable: pagination is sequential, so state is checkpointed after every batch.
+    Re-run until `done` is True.
+    """
+    OUT.mkdir(parents=True, exist_ok=True)
+    cp = OUT / "holders_checkpoint.json"
+    print(f"Walking holders for {CONTRACTS['identity']} (checkpoint {cp})...")
+    st = conc_mod.walk_holders(CONTRACTS["identity"], cp, max_pages=args.max_pages)
+    if not st["done"]:
+        print("  incomplete, re-run this command to continue")
+        return {}
+    c = conc_mod.analyze(st["holders"])
+    summary = c.as_dict()
+    summary["buckets"] = conc_mod.bucket_report(st["holders"])
+    _write("concentration_summary.json", summary)
+    print(json.dumps(summary, indent=2))
+    return summary
+
+
 def cmd_report(args) -> None:
     from arcensus.report import render
 
@@ -165,6 +187,7 @@ def cmd_all(args) -> None:
     cmd_agents(argparse.Namespace(n=args.agents, seed=args.seed, probe=True, max_id=None))
     cmd_jobs(argparse.Namespace(n=args.jobs, seed=args.seed_jobs, max_id=None))
     cmd_reputation(argparse.Namespace(n=args.reputation, seed=args.seed, max_id=None))
+    cmd_concentration(argparse.Namespace(max_pages=1200))
     cmd_report(args)
 
 
@@ -200,6 +223,10 @@ def main() -> None:
     al.add_argument("--seed", type=int, default=7)
     al.add_argument("--seed-jobs", type=int, default=3, dest="seed_jobs")
     al.set_defaults(fn=cmd_all)
+
+    c = sub.add_parser("concentration")
+    c.add_argument("--max-pages", type=int, default=400, dest="max_pages")
+    c.set_defaults(fn=cmd_concentration)
 
     sub.add_parser("report").set_defaults(fn=cmd_report)
 

@@ -638,6 +638,14 @@ BSC, 15% on Base. **Arc is materially worse than all three.**
 Name templates account for 215 of 238 parsed documents, about 90%: `Agent-XXXXXX`
 (109), `Trader-XXXXXX` (56), `Bridge-XXXXXX` (50).
 
+**Ownership concentration** (full distribution, all 47,444 holders, not a sample):
+Gini **0.8879**, the highest of any chain measured, against 0.733 on Ethereum, 0.708
+on Base, and 0.134 on BSC. The shape differs from Ethereum's: the top 1% holds only
+25.5% and the largest holder has 904 agents (0.1%). What drives the coefficient is
+**~2,998 wallets each holding between 100 and 499 agents, together 79.4% of the entire
+population**, alongside 31,367 wallets holding exactly one. A flat farm rather than a
+few whales.
+
 Reputation, 2,295 feedback records decoded from 35 rated agents:
 
 - **`valueDecimals` is used inconsistently within the same registry**: 1,742 records at
@@ -676,9 +684,12 @@ agents, ~150k feedback records. **The single most useful document found.**
 | **Arc (ours)** | **~888,000** | **0%** | **0.4%** | **0%** |
 
 - Ownership concentration: Gini 0.733 (ETH), 0.708 (Base), 0.134 (BSC). Top 1% of ETH
-  wallets own 58.5% of agents. **Not yet measured for Arc.**
+  wallets own 58.5% of agents. **Arc MEASURED: Gini 0.8879, the highest of any chain
+  measured, but with a different shape. Top 1% holds only 25.5% and the largest holder
+  has 904 agents (0.1%). What drives it is ~3,000 wallets each holding 100 to 499
+  agents, together 79.4% of the population. A flat farm, not whales.**
 - On Ethereum, 2.6% of registration transactions (batch) produced 48.3% of all agents.
-  **Not yet measured for Arc.**
+  **Not yet measured for Arc**; needs transaction-level scanning.
 - Activation is near-instant or never: 92-93% of later-activated agents set their URI
   within one day.
 - Service types: BSC is ~70% plain Web; Base has the strongest agent-native presence
@@ -931,8 +942,9 @@ Roughly in order of value.
     than enforced. Zero adoption required.
 11. **Cross-chain comparison.** Same methodology on Base, where the service population
     is large, versus Arc. Promoted from future work to the v1 spine (§6).
-12. **Agent concentration analysis on Arc.** Gini, batch-registration detection. The
-    direct analogue of the study's §4 and not yet run.
+12. **Batch-registration and funding-graph analysis on Arc.** Concentration is done
+    (§6). What remains is whether the ~3,000 mid-size farming wallets are one operator
+    or many, which ownership data cannot separate. Needs the funding graph.
 
 ---
 
@@ -1020,7 +1032,9 @@ was wrong before building on it. Keep measuring before designing.
 - [ ] Decide O9: census paper first, or shopper first. Recommendation: census.
 - [ ] Get a keyed RPC provider (QuickNode or Chainstack). Scales the agent sample from
       250 to 3,000 and makes confidence intervals publication-grade.
-- [ ] Agent concentration analysis on Arc: Gini, batch-registration detection (§12.12).
+- [x] Agent concentration analysis on Arc. Done: Gini 0.8879, ~3,000 wallets holding
+      100-499 agents account for 79.4%. See §6 and `docs/03`.
+- [ ] Funding-graph analysis: are the ~3,000 farming wallets one operator or many?
 - [ ] Enumerate the Base x402 service population before committing to the Base pivot.
 - [ ] Read arXiv:2606.26028 §8.
 - [ ] Read arXiv:2108.05521.

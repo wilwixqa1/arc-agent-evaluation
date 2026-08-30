@@ -1,0 +1,65 @@
+{
+  "holders": 47444,
+  "total_agents": 888277,
+  "gini": 0.8879,
+  "top1_pct_share": 25.52,
+  "top10_pct_share": 92.03,
+  "top_holder_share": 0.1,
+  "hhi": 0.000314,
+  "mean_per_holder": 18.72,
+  "median_per_holder": 1,
+  "max_per_holder": 904,
+  "singletons": 31367,
+  "singleton_share": 66.11,
+  "buckets": [
+    {
+      "range": "1",
+      "holders": 31367,
+      "holders_pct": 66.11,
+      "agents": 31367,
+      "agents_pct": 3.53
+    },
+    {
+      "range": "2-4",
+      "holders": 9572,
+      "holders_pct": 20.18,
+      "agents": 25097,
+      "agents_pct": 2.83
+    },
+    {
+      "range": "5-9",
+      "holders": 1163,
+      "holders_pct": 2.45,
+      "agents": 6621,
+      "agents_pct": 0.75
+    },
+    {
+      "range": "10-49",
+      "holders": 2013,
+      "holders_pct": 4.24,
+      "agents": 37080,
+      "agents_pct": 4.17
+    },
+    {
+      "range": "50-99",
+      "holders": 213,
+      "holders_pct": 0.45,
+      "agents": 18452,
+      "agents_pct": 2.08
+    },
+    {
+      "range": "100-499",
+      "holders": 2998,
+      "holders_pct": 6.32,
+      "agents": 705203,
+      "agents_pct": 79.39
+    },
+    {
+      "range": "500+",
+      "holders": 118,
+      "holders_pct": 0.25,
+      "agents": 64457,
+      "agents_pct": 7.26
+    }
+  ]
+}

@@ -119,6 +119,59 @@ materially worse than all three.**
 
 ---
 
+## 2b. Ownership concentration: a different shape from Ethereum
+
+Full holder distribution, not a sample. All 47,444 holders walked via the Blockscout
+holders endpoint, which returns ownership sorted descending through cursor pagination
+and needs no event scanning.
+
+| Measure | Arc testnet | Ethereum | Base | BSC |
+|---|---|---|---|---|
+| **Gini** | **0.8879** | 0.733 | 0.708 | 0.134 |
+| Top 1% share | 25.5% | 58.5% | — | — |
+| Top 10% share | **92.0%** | — | — | — |
+| Largest single holder | 904 agents (0.1%) | — | — | — |
+| Median holding | **1** | — | — | — |
+
+Arc is the most unequal chain measured. But the Gini alone is misleading, because a
+high coefficient driven by one whale and a high coefficient driven by thousands of
+mid-size wallets are different phenomena with the same number. Arc is the second kind.
+
+Holdings histogram (47,444 holders, 888,277 agents):
+
+| Holdings | Holders | Share of holders | Agents | Share of agents |
+|---|---|---|---|---|
+| 1 | 31,367 | 66.11% | 31,367 | 3.53% |
+| 2-4 | 9,572 | 20.18% | 25,097 | 2.83% |
+| 5-9 | 1,163 | 2.45% | 6,621 | 0.75% |
+| 10-49 | 2,013 | 4.24% | 37,080 | 4.17% |
+| 50-99 | 213 | 0.45% | 18,452 | 2.08% |
+| **100-499** | **2,998** | **6.32%** | **705,203** | **79.39%** |
+| 500+ | 118 | 0.25% | 64,457 | 7.26% |
+
+**Roughly 3,000 wallets each holding between 100 and 499 agents account for 79% of the
+entire population.** The largest holder has 904, so there is no dominant entity: the
+top 100 holders combined hold only 6.2%.
+
+That is not the Ethereum pattern, where 2.6% of registration transactions produced
+48.3% of agents through batching. It is a flat farm: thousands of wallets each running
+what looks like the same script to a similar depth. Whether that is one operator with
+3,000 wallets or many operators converging on the same behaviour is not separable from
+ownership data alone; it would need funding-graph analysis, which is future work.
+
+Two supporting observations:
+
+- The modal holding is 1 (31,367 wallets), and the next two modes are **2** (6,272
+  wallets) and **4** (2,653). Circle's quickstart creates exactly two wallets. That is
+  suggestive rather than conclusive, but it is the tutorial's fingerprint.
+- Summing holder balances gives **888,277 agents**, which cross-checks against the
+  887,911 Transfer events and the highest observed token ID of 888,262.
+
+Reproduce with `python census.py concentration`. The walk is resumable; re-run until
+`done` is true.
+
+---
+
 ## 3. ERC-8183: three open questions closed
 
 Sample of 120 jobs drawn uniformly from 182,367, seed 3.
