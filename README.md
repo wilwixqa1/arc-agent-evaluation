@@ -72,12 +72,15 @@ docs/
   01-context.md          project source of truth: research, standards, decisions
   02-build-plan.md       architecture, phases, session roadmap, UI direction
   03-session-02-...md    empirical census findings and corrections to 01
+  04-purpose-schema.md   design rationale for the purpose document
+
+spec/
+  purpose.schema.json    the purpose document schema (draft 2020-12)
+  examples/              four sealed purposes, including a negative fixture
 
 tools/
-  arc-census/            measurement tooling (Python, no wallet required)
-    census.py            CLI
-    arcensus/            chain client, explorer client, analysis modules
-    data/                collected samples and summaries
+  arc-census/            chain measurement tooling (no wallet required)
+  purpose/               canonicalize, seal, validate and score purposes
 ```
 
 ## Quick start
@@ -96,6 +99,27 @@ Nothing here needs a wallet, a private key, or testnet funds. It is all read-onl
 
 To scale past the public RPC throttle, set `ARC_RPC_URL` to a keyed provider and raise
 `ARC_RPC_CONCURRENCY`. See [`tools/arc-census/README.md`](tools/arc-census/README.md).
+
+## The purpose document
+
+The core contribution. A structured statement of what a buying agent is trying to
+achieve, sealed before the outcome is knowable, graded against afterward.
+
+Two blocks. `constraints` is machine-checkable and no LLM touches it. `objective` is
+LLM-graded and requires **disqualifiers**: specific ways the request could fail. That
+field is the schema's main defence against self-serving purposes, because vacuous
+disqualifiers are far harder to write than vacuous success criteria.
+
+Specificity is scored from the document alone, before any response exists, so it can be
+tracked over time as a drift metric. Real examples score 0.81 to 0.91; a deliberately
+gamed fixture scores 0.14 while remaining schema-valid. The schema cannot stop
+vagueness, so it measures it instead.
+
+```bash
+cd tools/purpose && pip install -r requirements.txt
+python seal_examples.py
+python tests/test_purpose.py
+```
 
 ## Reference
 

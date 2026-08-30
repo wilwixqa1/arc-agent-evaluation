@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "0.1.0",
+  "purposeId": "b1d94e07-6a52-4f83-8c19-2e7f0a3b6d54",
+  "issuedAt": "2026-08-30T12:05:00Z",
+  "issuer": {
+    "authoredBy": "human",
+    "generatorId": null
+  },
+  "task": {
+    "summary": "Summarize x402 settlement activity on Base over the last 24 hours",
+    "domain": "summarization",
+    "inputs": {
+      "chain": "base",
+      "windowHours": 24,
+      "protocol": "x402"
+    }
+  },
+  "constraints": {
+    "maxPriceUsdc": 0.1,
+    "maxLatencyMs": 20000,
+    "responseFormat": "json",
+    "requiredFields": [
+      "windowStart",
+      "windowEnd",
+      "transactionCount"
+    ],
+    "numericBounds": [
+      {
+        "path": "transactionCount",
+        "min": 0,
+        "unit": "transactions"
+      }
+    ],
+    "freshness": {
+      "maxAgeSeconds": 3600,
+      "asOfField": "windowEnd"
+    }
+  },
+  "objective": {
+    "goal": "I am deciding whether x402 volume on Base is growing enough to justify building a paid service there, so I need magnitudes and a trend direction I can act on, not a description of what x402 is.",
+    "successCriteria": [
+      {
+        "id": "s1",
+        "statement": "The response gives a transaction count or settled volume figure covering a window of approximately 24 hours.",
+        "necessary": true
+      },
+      {
+        "id": "s2",
+        "statement": "The window boundaries are stated explicitly as timestamps or block ranges, so the figure can be reproduced."
+      },
+      {
+        "id": "s3",
+        "statement": "The response distinguishes x402 settlement activity from general USDC transfer activity on Base."
+      },
+      {
+        "id": "s4",
+        "statement": "Where the response gives a trend or comparison, it names the baseline period it is comparing against."
+      },
+      {
+        "id": "s5",
+        "statement": "Any figure the source could not determine is reported as unavailable rather than filled with a plausible-looking number."
+      }
+    ],
+    "disqualifiers": [
+      {
+        "id": "d1",
+        "statement": "The response explains what the x402 protocol is without reporting any activity figure for the requested window."
+      },
+      {
+        "id": "d2",
+        "statement": "Figures are given for a window materially different from 24 hours without saying so."
+      },
+      {
+        "id": "d3",
+        "statement": "Total USDC transfer volume on Base is presented as though it were x402 settlement volume."
+      }
+    ],
+    "outOfScope": [
+      "Activity on chains other than Base",
+      "Per-service breakdowns",
+      "Forecasts"
+    ]
+  },
+  "evaluation": {
+    "rubricRef": null,
+    "verdictScale": [
+      "served",
+      "partially_served",
+      "not_served",
+      "no_response",
+      "constraint_violated"
+    ],
+    "blinding": {
+      "hideProvider": true,
+      "hidePrice": true,
+      "hidePhrasingId": true
+    },
+    "repeats": 3
+  },
+  "binding": {
+    "canonicalization": "RFC8785",
+    "hashAlgorithm": "SHA-256",
+    "purposeHash": "0xa256938fc032edf30c0c93eaeebe7ca585646e1d5ded4a5ca04968b14749a277",
+    "sealedAt": "2026-08-30T12:05:00Z"
+  }
+}

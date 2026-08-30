@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "0.1.0",
+  "purposeId": "c72a4f18-9b3e-4d05-a6f7-1e84c9b20d63",
+  "issuedAt": "2026-08-30T12:10:00Z",
+  "issuer": {
+    "authoredBy": "human",
+    "generatorId": null
+  },
+  "task": {
+    "summary": "Assess who can upgrade the ERC-8183 AgenticCommerce contract on Arc testnet and what that lets them change",
+    "domain": "analysis",
+    "inputs": {
+      "chainId": 5042002,
+      "proxy": "0x0747EEf0706327138c69792bF28Cd525089e4583",
+      "implementation": "0xa316fd02827242d537f84730f8a37d0ba5fd351a"
+    }
+  },
+  "constraints": {
+    "maxPriceUsdc": 0.25,
+    "maxLatencyMs": 45000,
+    "responseFormat": "markdown",
+    "requiredSubstrings": [
+      "0x0747EEf0706327138c69792bF28Cd525089e4583"
+    ]
+  },
+  "objective": {
+    "goal": "I am deciding whether to build a system that depends on this contract's behaviour staying stable. What I need to know is who can change it under me and what they could change, so a generic explanation of proxy patterns does not help.",
+    "successCriteria": [
+      {
+        "id": "s1",
+        "statement": "The response identifies that 0x0747EEf0706327138c69792bF28Cd525089e4583 is an upgradeable proxy rather than a fixed implementation.",
+        "necessary": true
+      },
+      {
+        "id": "s2",
+        "statement": "The response names the specific access control mechanism governing upgrades on this contract, such as a named role or owner, rather than describing upgrade patterns generically.",
+        "necessary": true
+      },
+      {
+        "id": "s3",
+        "statement": "The response identifies at least one parameter an admin can change that would alter behaviour for existing users, such as fee settings or a hook whitelist."
+      },
+      {
+        "id": "s4",
+        "statement": "Claims about this contract are tied to evidence a reader could check, such as a function name, a role identifier, or a storage slot."
+      },
+      {
+        "id": "s5",
+        "statement": "Where the response is uncertain about this specific deployment, it says so rather than presenting a generic proxy description as a finding about this address."
+      }
+    ],
+    "disqualifiers": [
+      {
+        "id": "d1",
+        "statement": "The response describes ERC-1967 or UUPS proxies in general without any claim specific to address 0x0747EEf0706327138c69792bF28Cd525089e4583."
+      },
+      {
+        "id": "d2",
+        "statement": "The response asserts the contract is immutable or non-upgradeable."
+      },
+      {
+        "id": "d3",
+        "statement": "Function or role names are stated that do not exist in this contract's ABI."
+      },
+      {
+        "id": "d4",
+        "statement": "The response answers about a different contract, such as the ERC-8004 registries, without flagging the substitution."
+      }
+    ],
+    "outOfScope": [
+      "Audit of the implementation logic",
+      "Gas optimization",
+      "Comparison with 8183 deployments on other chains"
+    ]
+  },
+  "evaluation": {
+    "rubricRef": null,
+    "verdictScale": [
+      "served",
+      "partially_served",
+      "not_served",
+      "no_response",
+      "constraint_violated"
+    ],
+    "blinding": {
+      "hideProvider": true,
+      "hidePrice": true,
+      "hidePhrasingId": true
+    },
+    "repeats": 3
+  },
+  "binding": {
+    "canonicalization": "RFC8785",
+    "hashAlgorithm": "SHA-256",
+    "purposeHash": "0x272014c92b64a32b77a363cce443495ff17de43ad124fbb708cc0873bed9b027",
+    "sealedAt": "2026-08-30T12:10:00Z"
+  }
+}

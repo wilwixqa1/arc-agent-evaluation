@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "0.1.0",
+  "purposeId": "0a1b2c3d-4e5f-4a6b-8c9d-0e1f2a3b4c5d",
+  "issuedAt": "2026-08-30T12:15:00Z",
+  "issuer": {
+    "authoredBy": "model",
+    "generatorId": "negative-fixture"
+  },
+  "task": {
+    "summary": "Give me some good information about agent payments",
+    "domain": "other",
+    "inputs": {}
+  },
+  "constraints": {},
+  "objective": {
+    "goal": "I would like to understand agent payments better so that I am more informed about the topic overall.",
+    "successCriteria": [
+      {
+        "id": "s1",
+        "statement": "The response is helpful and relevant to the question asked."
+      },
+      {
+        "id": "s2",
+        "statement": "The information provided is of reasonably high quality."
+      }
+    ],
+    "disqualifiers": [
+      {
+        "id": "d1",
+        "statement": "The response is not useful or does not address the topic appropriately."
+      }
+    ]
+  },
+  "evaluation": {
+    "rubricRef": null,
+    "verdictScale": [
+      "served",
+      "partially_served",
+      "not_served",
+      "no_response",
+      "constraint_violated"
+    ],
+    "blinding": {
+      "hideProvider": false,
+      "hidePrice": false,
+      "hidePhrasingId": true
+    },
+    "repeats": 3
+  },
+  "binding": {
+    "canonicalization": "RFC8785",
+    "hashAlgorithm": "SHA-256",
+    "purposeHash": "0x8a97fb57c5cffa4f46a0f6f29d716fefc38138dd5a7eaf36199aa68d92f6aed7",
+    "sealedAt": "2026-08-30T12:15:00Z"
+  }
+}

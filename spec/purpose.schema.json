@@ -1,0 +1,235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/wilwixqa1/arc-agent-evaluation/spec/purpose.schema.json",
+  "title": "Purpose Document",
+  "description": "A structured statement of what a buying agent is trying to achieve, written and cryptographically bound BEFORE the outcome is knowable, so that the outcome can later be graded against it. The document separates machine-checkable constraints from LLM-graded objectives.",
+  "type": "object",
+  "required": ["schemaVersion", "purposeId", "issuedAt", "task", "constraints", "objective", "evaluation"],
+  "additionalProperties": false,
+
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semver of this schema. Verdicts are only comparable within a major version."
+    },
+
+    "purposeId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Stable identifier. Phrasing variations and repeats all reference the same purposeId."
+    },
+
+    "issuedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the purpose was sealed. Must precede the first request."
+    },
+
+    "issuer": {
+      "type": "object",
+      "description": "Who is buying. Optional so purposes can be authored before an agent exists.",
+      "additionalProperties": false,
+      "properties": {
+        "agentId": { "type": ["integer", "null"], "minimum": 0 },
+        "chainId": { "type": ["integer", "null"] },
+        "registry": { "type": ["string", "null"], "pattern": "^0x[a-fA-F0-9]{40}$" },
+        "wallet": { "type": ["string", "null"], "pattern": "^0x[a-fA-F0-9]{40}$" },
+        "authoredBy": {
+          "type": "string",
+          "enum": ["human", "model", "human-edited-model"],
+          "description": "Provenance of the wording. Needed to detect whether one generator's voice is driving results."
+        },
+        "generatorId": { "type": ["string", "null"] }
+      }
+    },
+
+    "task": {
+      "type": "object",
+      "required": ["summary", "domain"],
+      "additionalProperties": false,
+      "properties": {
+        "summary": {
+          "type": "string",
+          "minLength": 12,
+          "maxLength": 300,
+          "description": "One line, plain language. This is the seed the phrasing generator varies. It is NOT the thing being graded."
+        },
+        "domain": {
+          "type": "string",
+          "enum": ["data-lookup", "summarization", "analysis", "code", "search", "extraction", "translation", "classification", "generation", "other"]
+        },
+        "inputs": {
+          "type": "object",
+          "description": "Concrete referents the request is about: addresses, URLs, identifiers, date ranges. Free-form, but every value here is checkable against the response.",
+          "additionalProperties": true
+        }
+      }
+    },
+
+    "constraints": {
+      "type": "object",
+      "description": "HARD BLOCK. Every field here is evaluated deterministically, with no LLM involved. A violation is a fact, not an opinion, and is not contestable.",
+      "additionalProperties": false,
+      "properties": {
+        "maxPriceUsdc": { "type": ["number", "null"], "minimum": 0 },
+        "maxLatencyMs": { "type": ["integer", "null"], "minimum": 1 },
+        "responseFormat": {
+          "type": ["string", "null"],
+          "enum": ["json", "text", "markdown", "csv", "binary", null]
+        },
+        "responseSchemaRef": {
+          "type": ["string", "null"],
+          "description": "URI of a JSON Schema the response must validate against. The strongest available constraint; prefer it when the output shape is known."
+        },
+        "requiredFields": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "JSON pointers or dotted paths that must be present and non-empty."
+        },
+        "requiredSubstrings": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Literal strings that must appear. Use for concrete referents from task.inputs, not for phrasing."
+        },
+        "forbiddenSubstrings": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "numericBounds": {
+          "type": "array",
+          "description": "Range assertions on extracted values. The clearest form of a falsifiable expectation.",
+          "items": {
+            "type": "object",
+            "required": ["path"],
+            "additionalProperties": false,
+            "properties": {
+              "path": { "type": "string" },
+              "min": { "type": ["number", "null"] },
+              "max": { "type": ["number", "null"] },
+              "unit": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "freshness": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "maxAgeSeconds": { "type": "integer", "minimum": 1 },
+            "asOfField": { "type": ["string", "null"] }
+          }
+        }
+      }
+    },
+
+    "objective": {
+      "type": "object",
+      "description": "SOFT BLOCK. Graded by an LLM judge against the response. Written before the outcome exists, which is what makes 'was this good' a well-posed question.",
+      "required": ["goal", "successCriteria", "disqualifiers"],
+      "additionalProperties": false,
+      "properties": {
+        "goal": {
+          "type": "string",
+          "minLength": 24,
+          "maxLength": 1000,
+          "description": "What the buyer is trying to accomplish and why. Context the judge needs to distinguish a technically-correct-but-useless answer from a useful one."
+        },
+        "successCriteria": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 12,
+          "description": "Independently gradeable statements. Two minimum: a single criterion collapses to a vibe check.",
+          "items": {
+            "type": "object",
+            "required": ["id", "statement"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string", "pattern": "^s[0-9]+$" },
+              "statement": {
+                "type": "string",
+                "minLength": 16,
+                "maxLength": 400,
+                "description": "Must be answerable yes or no by someone holding only this document and the response."
+              },
+              "weight": { "type": "number", "minimum": 0, "maximum": 1, "default": 1 },
+              "necessary": {
+                "type": "boolean",
+                "default": false,
+                "description": "If true, failing this criterion caps the verdict at partially_served regardless of the others."
+              }
+            }
+          }
+        },
+        "disqualifiers": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "description": "What would make this NOT served even if the success criteria appear met. Required, and deliberately so: it is far harder to write a vacuous disqualifier than a vacuous success criterion, so this field is the schema's main defence against self-serving purposes.",
+          "items": {
+            "type": "object",
+            "required": ["id", "statement"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string", "pattern": "^d[0-9]+$" },
+              "statement": { "type": "string", "minLength": 16, "maxLength": 400 }
+            }
+          }
+        },
+        "outOfScope": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Things the buyer is explicitly not asking for, so the judge does not penalize their absence."
+        }
+      }
+    },
+
+    "evaluation": {
+      "type": "object",
+      "required": ["verdictScale", "blinding"],
+      "additionalProperties": false,
+      "properties": {
+        "rubricRef": { "type": ["string", "null"], "description": "URI of the judging rubric applied." },
+        "verdictScale": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "type": "string", "enum": ["served", "partially_served", "not_served", "no_response", "constraint_violated"] }
+        },
+        "blinding": {
+          "type": "object",
+          "description": "What the judge must not see. Withheld to prevent halo effects and to keep questions like 'does price predict quality' answerable from this data.",
+          "required": ["hideProvider", "hidePrice", "hidePhrasingId"],
+          "additionalProperties": false,
+          "properties": {
+            "hideProvider": { "type": "boolean" },
+            "hidePrice": { "type": "boolean" },
+            "hidePhrasingId": { "type": "boolean" }
+          }
+        },
+        "repeats": { "type": "integer", "minimum": 1, "default": 3 }
+      }
+    },
+
+    "binding": {
+      "type": "object",
+      "description": "Cryptographic seal. purposeHash is computed over this document with binding removed entirely, canonicalized per RFC 8785 and hashed with SHA-256.",
+      "additionalProperties": false,
+      "properties": {
+        "canonicalization": { "type": "string", "const": "RFC8785" },
+        "hashAlgorithm": { "type": "string", "const": "SHA-256" },
+        "purposeHash": { "type": "string", "pattern": "^0x[a-f0-9]{64}$" },
+        "sealedAt": { "type": "string", "format": "date-time" },
+        "onChain": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "chainId": { "type": "integer" },
+            "contract": { "type": "string", "pattern": "^0x[a-fA-F0-9]{40}$" },
+            "field": { "type": "string", "enum": ["description", "requestURI", "feedbackURI"] },
+            "jobId": { "type": ["integer", "null"] },
+            "txHash": { "type": ["string", "null"], "pattern": "^0x[a-fA-F0-9]{64}$" }
+          }
+        }
+      }
+    }
+  }
+}

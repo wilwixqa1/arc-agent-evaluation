@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "0.1.0",
+  "purposeId": "5f8c2a91-3d47-4e6b-9a12-7c0e5b4d8f31",
+  "issuedAt": "2026-08-30T12:00:00Z",
+  "issuer": {
+    "authoredBy": "human",
+    "generatorId": null
+  },
+  "task": {
+    "summary": "Get the current total USDC supply on Arc testnet and the block it was read at",
+    "domain": "data-lookup",
+    "inputs": {
+      "chainId": 5042002,
+      "contract": "0x3600000000000000000000000000000000000000",
+      "asOf": "latest"
+    }
+  },
+  "constraints": {
+    "maxPriceUsdc": 0.02,
+    "maxLatencyMs": 8000,
+    "responseFormat": "json",
+    "requiredFields": [
+      "totalSupply",
+      "blockNumber"
+    ],
+    "requiredSubstrings": [
+      "0x3600000000000000000000000000000000000000"
+    ],
+    "numericBounds": [
+      {
+        "path": "blockNumber",
+        "min": 59000000,
+        "max": 200000000,
+        "unit": "block"
+      },
+      {
+        "path": "totalSupply",
+        "min": 0,
+        "unit": "USDC base units"
+      }
+    ],
+    "freshness": {
+      "maxAgeSeconds": 120,
+      "asOfField": "blockNumber"
+    }
+  },
+  "objective": {
+    "goal": "I am building a dashboard that reports USDC supply on Arc and I need a figure I can display with an as-of block, so a number without provenance is worthless to me even if it is correct.",
+    "successCriteria": [
+      {
+        "id": "s1",
+        "statement": "The response reports a totalSupply figure for contract 0x3600000000000000000000000000000000000000 specifically, not for USDC on another chain.",
+        "necessary": true
+      },
+      {
+        "id": "s2",
+        "statement": "The response includes the block number at which the supply was read, and that block is above 59000000.",
+        "necessary": true
+      },
+      {
+        "id": "s3",
+        "statement": "The units of totalSupply are stated or unambiguously derivable, so 6-decimal base units are not confused with whole USDC."
+      },
+      {
+        "id": "s4",
+        "statement": "The response does not silently substitute a cached or estimated value where a live read was requested."
+      }
+    ],
+    "disqualifiers": [
+      {
+        "id": "d1",
+        "statement": "The figure returned is USDC supply on Ethereum, Base, or any chain other than chainId 5042002."
+      },
+      {
+        "id": "d2",
+        "statement": "A totalSupply number is given with no block number, timestamp, or other as-of marker anywhere in the response."
+      },
+      {
+        "id": "d3",
+        "statement": "The response is a general explanation of how to query USDC supply rather than the supply figure itself."
+      }
+    ],
+    "outOfScope": [
+      "Historical supply series",
+      "Supply on any chain other than Arc testnet",
+      "USDC price"
+    ]
+  },
+  "evaluation": {
+    "rubricRef": null,
+    "verdictScale": [
+      "served",
+      "partially_served",
+      "not_served",
+      "no_response",
+      "constraint_violated"
+    ],
+    "blinding": {
+      "hideProvider": true,
+      "hidePrice": true,
+      "hidePhrasingId": true
+    },
+    "repeats": 3
+  },
+  "binding": {
+    "canonicalization": "RFC8785",
+    "hashAlgorithm": "SHA-256",
+    "purposeHash": "0xd071221a86d4ee6c5b4bcdf1fc1c47a34bdb08c45f16706b6be7e0f37f6eccce",
+    "sealedAt": "2026-08-30T12:00:00Z"
+  }
+}
