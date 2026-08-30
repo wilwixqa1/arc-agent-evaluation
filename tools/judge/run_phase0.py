@@ -31,8 +31,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from judgelib import (  # noqa: E402
-    JudgeAnswers, SYSTEM, aggregate, available_providers, build_prompt,
-    criterion_consistency, derive, get_provider, parse_judge_output, RUBRIC_VERSION,
+    JudgeAnswers, SYSTEM, aggregate, available_providers, build_prompt, build_record,
+    criterion_consistency, derive, get_provider, parse_judge_output, validate_record,
+    RUBRIC_VERSION,
 )
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -100,12 +101,26 @@ def run(items: list[dict], repeats: int, provider, dry_run: bool, seed: int) -> 
             try:
                 comp = provider.complete(SYSTEM, prompt)
                 ans = to_answers(parse_judge_output(comp.text))
-                dv = derive(ans, purpose)
+                # Fixtures carry no observed latency or price, so the constraint pass
+                # returns not_applicable or indeterminate throughout. It runs anyway,
+                # so the same code path is exercised here as on a real attempt.
+                vrec = build_record(
+                    purpose,
+                    {"attemptId": fid, "body": fix["response"]},
+                    ans,
+                    provider=comp.provider, model=comp.model,
+                    blinding_applied=(purpose.get("evaluation") or {}).get("blinding", {}),
+                    latency_ms=comp.latency_ms, repeat_index=rep, prompt=prompt,
+                )
+                schema_errs = validate_record(vrec)
+                dv_verdict, dv_rule = vrec["verdict"]["value"], vrec["verdict"]["rule"]
+                rec.setdefault("verdictRecords", []).append(vrec)
                 rec["runs"].append({
                     "repeat": rep,
-                    "verdict": dv.verdict,
-                    "rule": dv.rule,
-                    "explanation": dv.explanation,
+                    "verdict": dv_verdict,
+                    "rule": dv_rule,
+                    "explanation": vrec["verdict"]["explanation"],
+                    "schema_errors": schema_errs,
                     "criteria": ans.criteria,
                     "disqualifiers": ans.disqualifiers,
                     "reasoning": ans.reasoning,
@@ -217,6 +232,11 @@ def main() -> None:
     summary = score(records)
     OUT.mkdir(exist_ok=True)
     (OUT / "phase0_records.json").write_text(json.dumps(records, indent=2))
+    verdicts = [v for r in records for v in r.get("verdictRecords", [])]
+    (OUT / "verdict_records.json").write_text(json.dumps(verdicts, indent=2))
+    summary["verdict_records_written"] = len(verdicts)
+    summary["verdict_schema_errors"] = sum(
+        1 for r in records for x in r["runs"] if x.get("schema_errors"))
     (OUT / "phase0_summary.json").write_text(json.dumps(summary, indent=2))
 
     print("\n" + json.dumps(summary, indent=2))

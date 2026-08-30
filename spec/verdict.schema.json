@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/wilwixqa1/arc-agent-evaluation/spec/verdict.schema.json",
+  "title": "Verdict Record",
+  "description": "The result of evaluating one attempt against one sealed purpose. Deliberately a separate entity from the attempt: the same attempt will be judged more than once, by more than one model, once the peer prediction layer exists. Publishing this record in full is what makes a verdict contestable rather than authoritative.",
+  "type": "object",
+  "required": ["schemaVersion", "verdictId", "purposeHash", "attemptId", "constraints", "judgement", "verdict"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "verdictId": { "type": "string", "format": "uuid" },
+    "issuedAt": { "type": "string", "format": "date-time" },
+
+    "purposeHash": {
+      "type": "string",
+      "pattern": "^0x[a-f0-9]{64}$",
+      "description": "Binds this verdict to the exact purpose text that was sealed before the request. If the purpose is edited afterward, this no longer resolves, which is the point."
+    },
+    "purposeId": { "type": "string", "format": "uuid" },
+    "rubricVersion": { "type": "string" },
+
+    "attemptId": { "type": "string" },
+    "phrasingId": { "type": ["string", "null"] },
+    "repeatIndex": { "type": "integer", "minimum": 0 },
+
+    "constraints": {
+      "type": "object",
+      "description": "Deterministic results. Computed with no model involved, so these are facts rather than opinions and outrank the judge in verdict derivation.",
+      "required": ["ok", "violations", "checks"],
+      "additionalProperties": false,
+      "properties": {
+        "ok": { "type": "boolean" },
+        "violations": { "type": "array", "items": { "type": "string" } },
+        "indeterminate": { "type": "array", "items": { "type": "string" } },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["constraint", "status", "detail"],
+            "additionalProperties": true,
+            "properties": {
+              "constraint": { "type": "string" },
+              "status": { "type": "string", "enum": ["pass", "fail", "not_applicable", "indeterminate"] },
+              "detail": { "type": "string" },
+              "expected": {},
+              "actual": {}
+            }
+          }
+        }
+      }
+    },
+
+    "judgement": {
+      "type": "object",
+      "description": "The judge's per-item answers. The judge is never asked for an overall verdict; it answers these questions only.",
+      "required": ["criteria", "disqualifiers"],
+      "additionalProperties": false,
+      "properties": {
+        "model": { "type": ["string", "null"] },
+        "provider": { "type": ["string", "null"] },
+        "temperature": { "type": ["number", "null"] },
+        "blindingApplied": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "hideProvider": { "type": "boolean" },
+            "hidePrice": { "type": "boolean" },
+            "hidePhrasingId": { "type": "boolean" },
+            "fieldsRemoved": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "criteria": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["answer"],
+            "additionalProperties": false,
+            "properties": {
+              "answer": { "type": "string", "enum": ["met", "not_met", "unclear"] },
+              "reasoning": { "type": "string" }
+            }
+          }
+        },
+        "disqualifiers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["answer"],
+            "additionalProperties": false,
+            "properties": {
+              "answer": { "type": "string", "enum": ["triggered", "not_triggered", "unclear"] },
+              "reasoning": { "type": "string" }
+            }
+          }
+        },
+        "latencyMs": { "type": ["integer", "null"] }
+      }
+    },
+
+    "verdict": {
+      "type": "object",
+      "required": ["value", "rule", "explanation"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": ["served", "partially_served", "not_served", "no_response", "constraint_violated"]
+        },
+        "rule": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7,
+          "description": "Which derivation rule fired. Recorded so a disputed verdict points at a specific rule and a specific criterion rather than at a judgment call."
+        },
+        "explanation": { "type": "string" }
+      }
+    },
+
+    "consistency": {
+      "type": ["object", "null"],
+      "description": "Present on aggregated records covering several repeats. Never omitted when repeats disagreed: presenting a 2-of-3 verdict as unanimous is the fake determinism this project criticizes in numeric reputation scores.",
+      "additionalProperties": false,
+      "properties": {
+        "repeats": { "type": "integer", "minimum": 1 },
+        "modalVerdict": { "type": ["string", "null"] },
+        "agreement": { "type": "number", "minimum": 0, "maximum": 1 },
+        "unanimous": { "type": "boolean" },
+        "distribution": { "type": "object", "additionalProperties": { "type": "integer" } },
+        "perCriterion": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "modal": { "type": "string" },
+              "consistency": { "type": "number" },
+              "distribution": { "type": "object", "additionalProperties": { "type": "integer" } }
+            }
+          }
+        }
+      }
+    },
+
+    "evidence": {
+      "type": "object",
+      "description": "Where the full transcript lives. A verdict without retrievable evidence is an assertion, and D12 commits to publishing everything.",
+      "additionalProperties": false,
+      "properties": {
+        "requestURI": { "type": ["string", "null"] },
+        "responseURI": { "type": ["string", "null"] },
+        "responseHash": { "type": ["string", "null"], "pattern": "^0x[a-f0-9]{64}$" },
+        "promptHash": { "type": ["string", "null"], "pattern": "^0x[a-f0-9]{64}$" }
+      }
+    },
+
+    "onChain": {
+      "type": ["object", "null"],
+      "description": "Where this verdict was written. The ERC-8183 `reason` slot is bytes32 and takes the verdict hash directly; ERC-8004 `feedbackURI` and `feedbackHash` take the evidence pointer that Circle's own tutorial passes empty.",
+      "additionalProperties": false,
+      "properties": {
+        "chainId": { "type": "integer" },
+        "contract": { "type": "string", "pattern": "^0x[a-fA-F0-9]{40}$" },
+        "field": { "type": "string", "enum": ["reason", "deliverable", "feedbackURI", "feedbackHash", "responseURI"] },
+        "jobId": { "type": ["integer", "null"] },
+        "txHash": { "type": ["string", "null"], "pattern": "^0x[a-fA-F0-9]{64}$" },
+        "verdictHash": { "type": ["string", "null"], "pattern": "^0x[a-f0-9]{64}$" }
+      }
+    }
+  }
+}

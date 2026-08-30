@@ -76,3 +76,40 @@ judging, because blinding without shuffling leaks the grouping through ordering.
 
 Blinding is declared in the sealed purpose, not in this runner's configuration, so
 turning it off is part of the permanent record.
+
+## Constraints run before the judge
+
+`judgelib/constraints.py` evaluates the hard half of a purpose: price ceiling, latency
+ceiling, response format, required fields, required and forbidden substrings, numeric
+bounds, JSON Schema, and freshness. No model involved, so a violation is a fact rather
+than an opinion.
+
+It feeds rule 2 of the derivation, which sits above every judge answer. A response that
+met all four success criteria and triggered no disqualifiers still comes back
+`constraint_violated` if it blew the latency ceiling.
+
+Three distinctions the checker keeps that a naive version collapses:
+
+- **`not_applicable` is not `pass`.** A purpose that set no price ceiling did not pass
+  a price check, so a purpose with an empty constraints block cannot look like one that
+  cleared everything.
+- **`indeterminate` is not `fail`.** If price paid was never recorded, that is missing
+  instrumentation on our side, not a violation by the service. Indeterminate results
+  are reported separately and never produce a verdict.
+- **Present but empty is missing.** A required field carrying `null` or `""` carries no
+  value, so it counts as absent.
+
+## Verdict records
+
+`spec/verdict.schema.json` is the published artifact. It carries the purpose hash, the
+full constraint check list, every per-criterion answer with its reasoning, the derived
+verdict with which rule fired, the consistency block across repeats, and evidence
+hashes.
+
+Verdicts are hashed like purposes: RFC 8785 then SHA-256, excluding the mutable
+`onChain` block so that writing the verdict on-chain does not change the hash being
+written. The result is 32 bytes and drops straight into the ERC-8183 `reason` slot at
+complete or reject.
+
+The consistency block is never omitted. Presenting a 2-of-3 verdict as unanimous is the
+fake determinism this project criticizes in numeric reputation scores.

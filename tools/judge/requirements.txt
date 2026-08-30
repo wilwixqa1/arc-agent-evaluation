@@ -1,1 +1,1 @@
-# stdlib only; providers are called over urllib
+jsonschema>=4.20
